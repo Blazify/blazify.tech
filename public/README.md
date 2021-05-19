@@ -1,22 +1,36 @@
-# Blazescript
+# BlazeScript
 
-> Blazescript is a bytecode-compiled and vm interpreted programming language which is blazingly fast and object oriented, it contains all kind of features such as variables, functions, objects, classes, etc.
+> A intermediate compiled and vm interpreted language which is dynamically typed (for now) and object oriented
 
-## Installation Process
+## Installation
 
-First of all [install rust](https://www.rust-lang.org/tools/install)
+[Github Releases](https://github.com/BlazifyOrg/blazescript/releases)
+
+## Installing
+
+In Ubuntu Or MacOS
 
 ```shell
-$ git clone git@github.com:BlazifyOrg/blazescript.git
-$ cargo install --path blazescript/ --bin blazescript
+$ curl -fsSL https://raw.githubusercontent.com/BlazifyOrg/blazescript/main/install.sh | sh
 ```
+
+In Windows
+
+```shell
+$ Invoke-WebRequest https://raw.githubusercontent.com/BlazifyOrg/blazescript/main/install.sh -o install.sh
+$ bash install.sh
+```
+
+## Note
+
+> This language is very much work in-progress. We are also working on a [VSCode Extension](https://github.com/BlazifyOrg/blazescript-vscode) and we are also looking for collaborators
 
 ## Examples
 
-- Hello world
+- Printing the famous "Hello World"
 
 ```bzs
-println("Hello world!")
+println("Hello World!") @ yep as simple as that
 ```
 
 - Comments
@@ -24,70 +38,84 @@ println("Hello world!")
 ```bzs
 @ single line comment
 @@
-    multi-line comments
+	multi-line comment
 @@
 ```
 
-- Functions
+- Creating and calling functions
 
 ```bzs
-fun add(a, b) => {
-    return a + b;
+fun sum(a, b) => {
+    var c = a + b;
+    return c;
 }
 
-println(add(1, 2)); @ 3
+println(sum(2, 2));
 ```
 
-- Objects
+- Working around with objects
 
 ```bzs
 var obj = {
-    "property": 0
-};
+    "prop": 5 @ properties should be of String type or there will be Invalid Syntax Error
+}
 
-println(obj.property);
+println(obj.prop); @ accessing object property
 
-obj.property = 3;
-
-println(obj.property);
+obj.prop = 10; @ editing object property value
+println(obj.prop) @ 10
 ```
 
 - Classes
 
 ```bzs
 class Main {
-    var property = 0;
+    var a = 10; @ this is a property
 
-    fun() => { @ constructor
-        soul.property = 5; @ soul is the object is operating on.
+    @ this is constructor
+    fun() {
+        soul.a = 5; @ soul is the current object it's operating on
     }
 
-    fun setProperty(new_val) {
-        soul.property = new_val;
+    @ this is a method
+    fun sum_to_a(b) => {
+        soul.a = soul.a + b;
+        return soul;
     }
 }
 
-var klass = new Main();
-println(klass);
+var ins = new Main(); @ creating/initializing a class, returns a object with the properties
+println(ins);
 
-klass.setProperty(10);
-
-println(klass);
+println(ins.sum_to_a(5));
 ```
+
+## Dependencies
+
+> We don't use any external dependencies for the actual lexing, parsing, compiling or interpreting but we do use serde and bitcode for the intermediate code which is the executable and also mimalloc for allocation so that our language can be fast as possible and codespan-reporting for errors. Note the only branch which use dependencies are `blazescript` and `bzs_shared`
 
 ## Contributing
 
-```shell
-$ git checkout -b your_pull_request_branch_name
-$ npm i -g commitizen
-$ npm i -g cz-conventional-changelog
-$ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
-# Do any changes with the code you want in the pull request
-$ git add .
-$ cz
-$ git push origin your_pull_request_branch_name
-# create a pull request
-```
+- Fork the repository
+- Create a branch with the patch/feature you want
+- Make Changes to the code
+- Commit the code (Use the [Emoji Commit Style](https://gist.github.com/RoMeAh/29cb5008266ab14ace12ac865bfe0538))
+- Finally push the code and make a pull request
+
+## Project Structure
+
+|                                    Codebase                                     |                   Description                   |
+| :-----------------------------------------------------------------------------: | :---------------------------------------------: |
+|   [blazescript](https://github.com/BlazifyOrg/blazescript/crates/blazescript)   |                   The binary                    |
+|    [bzsc_lexer](https://github.com/BlazifyOrg/blazescript/crates/bzsc_lexer)    |              Lexer for Tokenizing               |
+|   [bzsc_parser](https://github.com/BlazifyOrg/blazescript/crates/bzsc_parser)   |               Parser for AST Tree               |
+| [bzsc_bytecode](https://github.com/BlazifyOrg/blazescript/crates/bzsc_bytecode) |               Bytecode Generator                |
+|      [blaze_vm](https://github.com/BlazifyOrg/blazescript/crates/blaze_vm)      |            The bytecode interpreter             |
+|    [bzs_shared](https://github.com/BlazifyOrg/blazescript/crates/bzs_shared)    | Structs, Methods, etc Shared among other crates |
+
+## Author
+
+- [RoMeAh (Ronit Rahaman)](https://www.romeah.me)
 
 ## License
 
