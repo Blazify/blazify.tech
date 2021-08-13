@@ -1,0 +1,3 @@
+- [Home](/)
+- [Blogs](blogs/)
+  - [Starting Up](blogs/starting_up)

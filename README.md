@@ -1,0 +1,121 @@
+# [BlazeX](https://bzx.blazify.rocks)
+
+- [Discord](https://discord.gg/R9NhMfr9Fu)
+- [Gitter](https://gitter.im/BlazifyOrg-blazex/community)
+- [Blazify](https://blazify.rocks)
+
+A object orineted AOT compiled language which is kinda statically typed (plan: move to gradual typing)
+
+## Installing
+
+In Ubuntu Or MacOS or Windows (WSL)
+
+```shell
+$ curl -fsSL https://raw.githubusercontent.com/BlazifyOrg/blazex/main/install | bash
+```
+
+Confirm Installation
+
+```shell
+$ blazex
+```
+
+```
+error: The following required arguments were not provided:
+    <path>
+
+USAGE:
+    blazex [FLAGS] [OPTIONS] <path>
+
+For more information try --help
+```
+
+## Note
+
+This language is very much work in-progress. We are also working on a [VSCode Extension](https://github.com/BlazifyOrg/blazex-vscode) and i am also looking for collaborators
+
+## Example
+
+- Printing the famous "Hello World"
+
+```bzx
+extern variadic fun printf(string): int;
+printf("Hello World!") @ yep as simple as that
+```
+
+- Comments
+
+```bzx
+@ single line comment
+@@
+	multi-line comment
+@@
+```
+
+- Creating and calling functions
+
+```bzx
+fun sum(a: int, b: int): int {
+    var c = a + b;
+    return c;
+}
+
+printf("%i", sum(2, 2));
+```
+
+- Working around with objects
+
+```bzx
+var obj = {
+    prop: 5 @ properties should be Identifier or there will be Invalid Syntax Error
+}
+
+println("%i\n", obj.prop); @ accessing object property
+
+obj.prop = 10; @ editing object property value
+printf("%i\n", obj.prop) @ 10
+```
+
+- Classes
+
+```bzx
+class Main {
+    var a = 10; @ this is a property
+
+    @ this is constructor
+    fun(): void {
+        soul.a = 5; @ soul is the current object it's operating on
+	    return soul;
+    }
+
+    @ this is a method
+    fun sum_to_a(b: int): int {
+        soul.a = soul.a + b;
+        return soul.a;
+    }
+}
+
+var ins = new Main(); @ creating/initializing a class, returns a object with the properties
+
+printf("%i\n", ins.sum_to_a(5));
+```
+
+## Dependencies
+
+- inkwell (Safe LLVM Wrapper) (Forked in crates/bzxc_llvm_wrapper)
+- codespan-reporting (Errors)
+- mimalloc (Memory allocation)
+- structopt (Argument parsing)
+- notify (Look for file changes)
+
+## Contributing
+
+- Fork the repository
+- Create a branch with the patch/feature you want
+- Make Changes to the code
+- Commit the code (Use the [Emoji Commit Style](https://github.com/BlazifyOrg/pretty-commits)) and the message should **NOT** contain the word "release"
+- Finally push the code and make a pull request
+
+## Author
+
+- [Ronit "RoMeAh" Rahaman](https://romeah.me/)
