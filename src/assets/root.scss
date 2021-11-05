@@ -1,0 +1,52 @@
+@import "../../node_modules/bulma/bulma.sass";
+
+html {
+  background-color: $blue;
+}
+
+.title {
+  color: $grey;
+}
+
+.is-7 {
+  color: $grey-light;
+}
+
+.is-4 {
+  color: $grey-light;
+}
+
+.is-3 {
+  color: $grey-light;
+}
+
+.heart {
+  color: $red;
+}
+
+a {
+  text-decoration: underline;
+  font-size: $size-5;
+}
+
+.am {
+  text-decoration: underline;
+  font-size: $size-7
+}
+
+/* Accessibility section */
+a:link {
+  color: #ffb3b3 !important;
+}
+
+a:visited {
+  color: #00e600 !important;
+}
+
+a:hover, a:focus {
+  color: #c1c1ff !important;
+}
+
+a:active {
+  color: #ccc !important;
+}
