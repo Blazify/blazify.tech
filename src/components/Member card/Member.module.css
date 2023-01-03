@@ -1,0 +1,103 @@
+.container {
+  /* width: 350px;
+  height: 551px; */
+  /* left: 0px;
+  top: 0px; */
+
+  background: #d9d9d9;
+  border-radius: 16px;
+
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+
+  /* padding-top: 30px; */
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  float: left;
+  margin: 0px 40px 0px 40px;
+}
+
+.rectangle2 {
+  width: 340px;
+  height: 176px;
+  left: 5px;
+  top: 5px;
+
+  background: url(../../assets/image/markus-winkler-IrRbSND5EUc-unsplash.jpg);
+  /* background-size: 340px; */
+  border-radius: 7px 7px 0px 0px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.profile {
+  /* position: fixed;
+  
+  left: 160px;
+   */
+  /* position: absolute; */
+  margin: 60px;
+  width: 209px;
+  height: 209px;
+  border-radius: 50%;
+
+  padding: 7px;
+  /* background-size: 209px; */
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+}
+
+p {
+  font-size: 17px;
+  line-height: 20px;
+  justify-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.skills {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  background: #ffffff;
+  border-radius: 14px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0px 10px 0px 10px;
+}
+
+button:hover {
+  color: #72298c;
+  transform: rotate(22deg);
+}
