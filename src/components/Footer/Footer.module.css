@@ -1,0 +1,98 @@
+.container {
+  background: #d9d9d9;
+  padding: 25px;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+.slogan {
+  margin-left: 100px;
+}
+
+.slogan h1 {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 61px;
+}
+.together {
+  margin-left: 175px;
+}
+
+.letsTalk {
+  width: 50vw;
+}
+.letsTalk p {
+  width: 400px;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 13px;
+}
+.letsTalk a {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.secondSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.logo {
+  margin-left: 100px;
+}
+.linkes {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkes h2 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+}
+.linkes p,
+a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+.address p {
+  width: 215px;
+}
+.callUsOn h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+}
+.ourPolicies {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0px 50px 0px 0px;
+}
+
+button:hover {
+  color: #72298c;
+  transform: rotate(22deg);
+}
+
+.arrow {
+  /* height: 40px; */
+}
