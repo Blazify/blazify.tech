@@ -5,8 +5,6 @@ import { useRef, useEffect, useState } from "react";
 import Member from "../Member card/Member";
 import memberData from "../../assets/MemberData";
 
-import { FaCircle } from "react-icons/fa";
-
 export default function MemberSection() {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
