@@ -5,18 +5,26 @@ import { Fragment } from "react";
 // import memberData from "./assets/MemberData";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
+import MemberSection from "./components/MemberSection/MemberSection";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <Fragment>
-      <Home />
+    <>
+      <div className="homeContainer">
+        <NavBar />
+        <section>
+          <Home />
+        </section>
 
-      <Footer />
-
-      {/* {memberData.map((item, index) => (
-        <Member key={index} memberData={item} />
-      ))} */}
-    </Fragment>
+        <section>
+          <MemberSection />
+        </section>
+        <section className="sectionFooter">
+          <Footer />
+        </section>
+      </div>
+    </>
   );
 }
 
