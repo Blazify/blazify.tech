@@ -21,6 +21,12 @@ function App() {
           <MemberSection />
         </section>
         <section className="sectionFooter">
+          <div className="footerImage">
+            <img
+              src={require("./assets/image/14620625_5484597.jpg")}
+              alt="illustratorImg"
+            />
+          </div>
           <Footer />
         </section>
       </div>

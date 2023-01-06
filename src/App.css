@@ -16,5 +16,18 @@ section {
 
 .sectionFooter {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.footerImage {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 30px;
+}
+.footerImage img {
+  /* height: 50%; */
+  width: 100%;
+  object-fit: contain;
 }
