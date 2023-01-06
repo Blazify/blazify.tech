@@ -1,11 +1,12 @@
 .navbar {
   overflow: hidden;
-  /* background-color: #333; */
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .navbar a {

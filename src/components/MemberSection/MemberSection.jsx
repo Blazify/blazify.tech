@@ -18,7 +18,7 @@ export default function MemberSection() {
       <div className={classes.title}>
         <div>
           <span className={classes.dot}></span>
-          {/* <FaCircle /> */}
+
           <h1>Members</h1>
         </div>
       </div>
