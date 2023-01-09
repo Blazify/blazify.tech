@@ -4,14 +4,14 @@
 }
 
 .homeContainer {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
   height: 100vh;
 }
 
 section {
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .sectionFooter {

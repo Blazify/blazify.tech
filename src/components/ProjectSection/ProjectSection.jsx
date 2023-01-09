@@ -1,31 +1,61 @@
 import React from "react";
 import classes from "./ProjectSection.module.css";
-import ProjectView from "./ProjectView";
+import ProjectViewMobile from "./ProjectViewMobile";
+import ProjectViewLaptop from "./ProjectViewLaptop";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
-export default function ProjectSection() {
+export default function ProjectSection(props) {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <div className={classes.projectSection}>
       <div className={classes.projectHeader}>
         <div className={classes.title}>
           <span className={classes.dot}></span>
           <div>
-            <h1>BlazeX</h1>
-            <h2>version 0.1.25</h2>
+            <h1>{props.ProjectData.title}</h1>
+            <h2>{props.ProjectData.version}</h2>
           </div>
         </div>
         <div className={classes.about}>
-          <p>AOT compiled object oriented programming language </p>
+          <p>{props.ProjectData.about}</p>
           <div>
             <h1>View Project </h1>
-            <a href="www.google.com">--{">"}</a>
+            <button
+              className={classes.arrow}
+              onClick={() => openInNewTab("www.google.com")}
+            >
+              <HiOutlineArrowLongRight className={classes.arrowIcon} />
+            </button>
+            {/* <a href={props.ProjectData.link}>--{">"}</a> */}
           </div>
         </div>
       </div>
-      <div className={classes.projectView}>
-        <ProjectView path="https://play-lh.googleusercontent.com/S1dMTqvysB-31RezOng7Rj-9X-3dseboYAZ2E50CqZG0jbYxuseP3EaDJ4BGk76jEg=h800" />
-        <ProjectView path="https://play-lh.googleusercontent.com/S1dMTqvysB-31RezOng7Rj-9X-3dseboYAZ2E50CqZG0jbYxuseP3EaDJ4BGk76jEg=h800" />
-        <ProjectView path="https://play-lh.googleusercontent.com/S1dMTqvysB-31RezOng7Rj-9X-3dseboYAZ2E50CqZG0jbYxuseP3EaDJ4BGk76jEg=h800" />
-      </div>
+      {props.ProjectData.type === "Laptop" && (
+        <div className={classes.projectViewLaptop}>
+          <ProjectViewLaptop path={props.ProjectData.URLlink} />
+        </div>
+      )}
+      {props.ProjectData.type === "Mobile" && (
+        <div className={classes.projectViewMobile}>
+          <ProjectViewMobile path={props.ProjectData.URLlink} />
+          <ProjectViewMobile path={props.ProjectData.URLlink} />
+          <ProjectViewMobile path={props.ProjectData.URLlink} />
+        </div>
+      )}{" "}
+      {props.ProjectData.type === "Laptop & Mobile" && (
+        <div className={classes.projectViewLaptopAndMobile}>
+          <ProjectViewLaptop
+            className={classes.LaptopOverflow}
+            path={props.ProjectData.URLlinkLaptop}
+          />
+          <ProjectViewMobile
+            className={classes.MobileOverflow}
+            path={props.ProjectData.URLlinkMobile}
+          />
+        </div>
+      )}
     </div>
   );
 }

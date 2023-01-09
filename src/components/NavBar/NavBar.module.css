@@ -9,7 +9,7 @@
   z-index: 1;
 }
 
-.navbar a {
+.actionLi {
   float: left;
   display: block;
   color: #000000;
@@ -18,12 +18,12 @@
   text-decoration: none;
   font-size: 36px;
   line-height: 42px;
+  cursor: pointer;
 }
 
-.navbar a:hover {
+.actionLi:hover {
   color: #72298c;
 }
-
 .action {
   width: 50vw;
   display: flex;

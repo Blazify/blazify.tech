@@ -32,7 +32,7 @@ export default function Footer() {
             className={classes.arrow}
             onClick={() => openInNewTab("www.google.com")}
           >
-            <HiOutlineArrowLongRight />
+            <HiOutlineArrowLongRight className={classes.arrowIcon} />
           </button>
         </div>
       </div>
@@ -41,13 +41,22 @@ export default function Footer() {
           <h1>LOGO</h1>
 
           <div>
-            <button onClick={() => openInNewTab("www.google.com")}>
+            <button
+              className={classes.btn}
+              onClick={() => openInNewTab("www.google.com")}
+            >
               <AiFillGithub />
             </button>
-            <button onClick={() => openInNewTab("www.google.com")}>
+            <button
+              className={classes.btn}
+              onClick={() => openInNewTab("www.google.com")}
+            >
               <AiFillLinkedin />
             </button>
-            <button onClick={() => openInNewTab("www.google.com")}>
+            <button
+              className={classes.btn}
+              onClick={() => openInNewTab("www.google.com")}
+            >
               <AiFillTwitterCircle />
             </button>
           </div>

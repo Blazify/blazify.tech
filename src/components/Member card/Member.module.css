@@ -87,7 +87,7 @@ p {
   padding: 7px;
 }
 
-button {
+.btn {
   border: none;
   background: none;
   font-size: 40px;
@@ -97,7 +97,7 @@ button {
   margin: 0px 10px 0px 10px;
 }
 
-button:hover {
+.btn:hover {
   color: #72298c;
   transform: rotate(22deg);
 }

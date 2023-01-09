@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./ProjectView.module.css";
-export default function ProjectView(props) {
+import classes from "./ProjectViewMobile.module.css";
+export default function ProjectViewMobile(props) {
   return (
     <div className={classes.container}>
       <img src={require("../../assets/image/mobileFrame2.png")} alt="" />

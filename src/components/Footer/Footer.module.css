@@ -85,7 +85,8 @@ a {
   flex-direction: column;
 }
 
-button {
+.btn,
+.arrow {
   border: none;
   background: none;
   font-size: 40px;
@@ -95,7 +96,17 @@ button {
   margin: 0px 50px 0px 0px;
 }
 
-button:hover {
+.btn:hover {
   color: #72298c;
   transform: rotate(22deg);
+}
+
+.arrow :hover {
+  color: #72298c;
+}
+
+.arrowIcon {
+  position: relative;
+  top: 10px;
+  left: 5px;
 }

@@ -49,13 +49,22 @@
   display: flex;
 }
 
-.projectView {
+.projectViewMobile {
   height: 70%;
 
   width: 80%;
 
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.projectViewLaptop {
+  height: 70%;
+
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -66,4 +75,36 @@
   border-radius: 50%;
   margin-right: 10px;
   display: inline-block;
+}
+
+.projectViewLaptopAndMobile {
+  height: 70%;
+
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.arrow {
+  border: none;
+  background: none;
+  font-size: 40px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  /* margin: 0px 50px 0px 0px; */
+}
+
+.arrow :hover {
+  color: #72298c;
+}
+
+.arrowIcon {
+  position: relative;
+  top: -5px;
+  left: 10px;
 }

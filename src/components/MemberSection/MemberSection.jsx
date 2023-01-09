@@ -34,7 +34,7 @@ export default function MemberSection() {
             className={classes.innerCarousel}
           >
             {memberData.map((data, index) => (
-              <motion.div className={classes.item}>
+              <motion.div key={index} className={classes.item}>
                 <Member
                   className={classes.member}
                   key={index}
