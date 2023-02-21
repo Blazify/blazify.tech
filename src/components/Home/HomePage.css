@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.homeContainer {
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  /* scroll-snap-align: start; */
+}
+
+.sectionFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.footerImage {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 30px;
+}
+.footerImage img {
+  /* height: 50%; */
+  width: 100%;
+  object-fit: contain;
+}

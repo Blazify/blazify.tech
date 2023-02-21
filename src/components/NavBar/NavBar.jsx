@@ -10,7 +10,7 @@ export default function NavBar(props) {
           className={classes.actionLi}
           onClick={() => props.scrollHandler(section1)}
         >
-          LOGO
+          <img style={{ height: "60px" }} src="/images/logo.png" alt="logo" />
         </li>
       </div>
       <ul className={classes.action}>

@@ -24,7 +24,7 @@ export default function ProjectSection(props) {
             <h1>View Project </h1>
             <button
               className={classes.arrow}
-              onClick={() => openInNewTab("www.google.com")}
+              onClick={() => openInNewTab(props.ProjectData.link)}
             >
               <HiOutlineArrowLongRight className={classes.arrowIcon} />
             </button>
