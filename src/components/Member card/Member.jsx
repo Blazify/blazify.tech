@@ -36,24 +36,30 @@ export default function Member(props) {
       </div>
 
       <div className="actions">
-        <button
-          className={classes.btn}
-          onClick={() => openInNewTab(data.social.github)}
-        >
-          <AiFillGithub />
-        </button>
-        <button
-          className={classes.btn}
-          onClick={() => openInNewTab(data.social.linkdin)}
-        >
-          <AiFillLinkedin />
-        </button>
-        <button
-          className={classes.btn}
-          onClick={() => openInNewTab(data.social.twitter)}
-        >
-          <AiFillTwitterCircle />
-        </button>
+        {data.social.github ? (
+          <button
+            className={classes.btn}
+            onClick={() => openInNewTab(data.social.github)}
+          >
+            <AiFillGithub />
+          </button>
+        ) : null}{" "}
+        {data.social.linkdin ? (
+          <button
+            className={classes.btn}
+            onClick={() => openInNewTab(data.social.linkdin)}
+          >
+            <AiFillLinkedin />
+          </button>
+        ) : null}{" "}
+        {data.social.twitter ? (
+          <button
+            className={classes.btn}
+            onClick={() => openInNewTab(data.social.twitter)}
+          >
+            <AiFillTwitterCircle />
+          </button>
+        ) : null}
       </div>
     </div>
   );

@@ -19,10 +19,10 @@ export default function HomePage() {
   const ProjectData1 = {
     type: "Laptop & Mobile",
     title: "Homic",
-    version: "version 0.1.25",
+    version: "version prototype",
     about:
       "A platform to look for people who provide services and also for freelancers to make use of their talent. ",
-    link: "https://github.com/Blazify/homic-web",
+    link: "https://homic.co.in",
 
     URLlinkLaptop: "/images/homic_web.jpeg",
 

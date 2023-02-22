@@ -27,10 +27,10 @@ export default function Footer() {
             Blazify is a organization led by young entrepreneurs to make the
             lives of people easier by digitalizing them.
           </p>
-          <a href="www.google.com"> LET'S TALK </a>
+          <a href="mailto:admin@blazify.tech"> LET'S TALK </a>
           <button
             className={classes.arrow}
-            onClick={() => openInNewTab("www.google.com")}
+            onClick={() => openInNewTab("mailto:admin@blazify.tech")}
           >
             <HiOutlineArrowLongRight className={classes.arrowIcon} />
           </button>
@@ -57,7 +57,7 @@ export default function Footer() {
             </button>
             <button
               className={classes.btn}
-              onClick={() => openInNewTab("www.google.com")}
+              onClick={() => openInNewTab("https://twitter.com/BlazifyOrg")}
             >
               <AiFillTwitterCircle />
             </button>
@@ -77,7 +77,7 @@ export default function Footer() {
             <p> +91 8250739628</p>
 
             <h1>DM Us:</h1>
-            <a href="www.google.com">admin@blazify.tech</a>
+            <a href="mailto:admin@blazify.tech">admin@blazify.tech</a>
           </div>
           <div className={classes.ourPolicies}>
             <h2>OUR POLICIES</h2>
