@@ -15,10 +15,11 @@ const data = [
   {
     name: "Karim Islam - CFO & COO",
     about: "Student with rich experience in financial management",
-    profileURL: "/images/profile.png",
+    profileURL:
+      "https://media.discordapp.net/attachments/889433027153903636/1081631605342339204/Snapinsta.app_1080_81565710_483822332561372_6306561876327086781_n.jpg?width=809&height=1012",
     tags: ["Accounting", "Financing", "Team Management"],
     social: {
-      linkdin: "https://www.linkedin.com/in/dygerz-d-99a968218/",
+      linkdin: "https://www.linkedin.com/in/karimislam",
     },
   },
   {
