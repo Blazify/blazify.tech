@@ -29,6 +29,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           script: |
             cd /root/blazify.tech
+            npm i
             npm run build
             pm2 delete blazify
             pm2 start 'serve -s build' --name blazify
